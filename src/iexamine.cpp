@@ -3397,9 +3397,6 @@ iexamine_function iexamine_function_from_string(std::string const &function_name
     if ("flower_dandelion" == function_name) {
         return &iexamine::flower_dandelion;
     }
-    if ("flower_chamomile" == function_name) {
-        return &iexamine::flower_chamomile;
-    }
     if ("examine_cattails" == function_name) {
         return &iexamine::examine_cattails;
     }
