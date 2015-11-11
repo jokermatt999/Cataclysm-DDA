@@ -2321,7 +2321,7 @@
 },
 {
   "type" : "recipe",
-  "result": "poppy_sleep",
+  "result": "tea_chamomile",
   "category": "CC_CHEM",
   "subcategory": "CSC_CHEM_DRUGS",
   "skill_used": "cooking",
