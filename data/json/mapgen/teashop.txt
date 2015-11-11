@@ -1,0 +1,101 @@
+[
+    {
+        "type": "item_group",
+        "id": "coffee_display_2",
+        "items": [
+            [ "bottle_glass", 5 ],
+            [ "ceramic_cup", 15 ],
+            [ "ceramic_plate", 15 ],
+            [ "chips", 25 ],
+            [ "chips2", 25 ],
+            [ "chips3", 25 ],
+            [ "choco_coffee_beans", 50 ],
+            [ "coffee_raw", 50 ],
+            [ "coffee_syrup", 15 ],
+            [ "cookies", 35 ],
+            [ "tea_raw", 50 ]
+        ]
+    },
+    {
+        "type": "mapgen",
+        "om_terrain": [ "s_restaurant_teashop" ],
+        "method": "json",
+        "weight": 250,
+        "object": {
+            "fill_ter": "t_floor",
+            "rows": [
+                "...S....................",
+                ".z.S.z..123123123123123.",
+                "...S....SSSSCTCSSSSSCSz.",
+                ".z.S.z..SCTCSSSSCTCSTSz.",
+                "...S....SSSSSCTCSSSSCSz.",
+                ".--+-ooo--OO-OO-OO-OO-..",
+                ".|,,,###|,ctc,,ctc,,t|..",
+                ".|{,,,,,|,,,,,,,,,,,c|..",
+                ".|{,tt,,,,,,c,,,,,,,,O..",
+                ".|{,tt,,,,,ctc,,c,,,,O..",
+                ".|,,,,,,|,,,c,,ctc,,c|..",
+                ".|6####,|c,,,,,,c,,,t|..",
+                ".|,,,,,,|t,,,,c,,,,,c|..",
+                ".|-+----|c,,,ctc,,,,,O..",
+                ".|#.F##K|,,,,,c,,,,c,O..",
+                ".|#.....+,,,,,,,,,ctc|..",
+                ".|#..vv.|,,ctc,,,,,c,|..",
+                ".|-+-------ooo---ooo-|..",
+                ".___&&__z...............",
+                "._______z...............",
+                "._______z...............",
+                "._______z...............",
+                "._______z...............",
+                "........................"
+            ],
+            "terrain": {
+                ".": "t_grass",
+                ",": "t_floor",
+                "{": "t_floor",
+                "c": "t_floor",
+                "t": "t_floor",
+                "C": "t_sidewalk",
+                "T": "t_sidewalk",
+                "S": "t_sidewalk",
+                "_": "t_pavement",
+                "&": "t_pavement",
+                "z": "t_shrub",
+                "1": "t_grass",
+                "2": "t_grass",
+                "3": "t_grass",
+                "6": "t_console_broken",
+                "|": "t_wall",
+                "-": "t_wall",
+                "+": "t_door_c",
+                "O": "t_window_domestic",
+                "o": "t_window",
+                "#": "t_floor",
+                "F": "t_floor",
+                "K": "t_floor",
+                "v": "t_floor"
+            },
+            "furniture": {
+                "c": "f_chair",
+                "t": "f_table",
+                "{": "f_bookcase",
+                "C": "f_chair",
+                "T": "f_table",
+                "&": "f_trashcan",
+                "K": "f_sink",
+                "F": "f_fridge",
+                "v": "f_sink",
+                "#": "f_counter",
+                "1": "f_dandelion",
+                "2": "f_dahlia",
+                "3": "f_bluebell"
+            },
+            "toilets": {
+                ";": { }
+            },
+            "items": {
+                "X": { "item": "coffee_newsstand", "chance": 80 },
+            }            
+        }
+    }
+]

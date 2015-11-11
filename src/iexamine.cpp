@@ -1442,6 +1442,27 @@ void iexamine::flower_dandelion(player *p, map *m, const tripoint &examp)
     m->spawn_item(examp, "raw_dandelion", rng( 1, 4 ) );
 }
 
+void iexamine::flower_chamomile(player *p, map *m, const tripoint &examp)
+{
+    if (calendar::turn.get_season() == WINTER) {
+        add_msg(m_info, _("This plant is dead. You can't get it."));
+        none(p, m, examp);
+        return;
+    }
+    if ( ((p->has_trait("PROBOSCIS")) || (p->has_trait("BEAK_HUM"))) &&
+         ((p->get_hunger()) > 0) && (!(p->wearing_something_on(bp_mouth))) ) {
+        p->moves -= 50; // Takes 30 seconds
+        add_msg(_("You drink some nectar."));
+        p->mod_hunger(-15);
+    }
+    if(!query_yn(_("Pick %s?"), m->furnname(examp).c_str())) {
+        none(p, m, examp);
+        return;
+    }
+    m->furn_set(examp, f_null);
+    m->spawn_item(examp, "raw_chamomile", rng( 1, 4 ) );
+}
+
 void iexamine::examine_cattails(player *p, map *m, const tripoint &examp)
 {
     if(!query_yn(_("Pick %s?"), m->furnname(examp).c_str())) {
@@ -3375,6 +3396,9 @@ iexamine_function iexamine_function_from_string(std::string const &function_name
     }
     if ("flower_dandelion" == function_name) {
         return &iexamine::flower_dandelion;
+    }
+    if ("flower_chamomile" == function_name) {
+        return &iexamine::flower_chamomile;
     }
     if ("examine_cattails" == function_name) {
         return &iexamine::examine_cattails;
